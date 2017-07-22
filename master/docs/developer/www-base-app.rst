@@ -22,17 +22,17 @@ AngularJS strong points are:
 
 * A very powerful `MVC system <http://docs.angularjs.org/guide/concepts>`_ allowing automatic update of the UI, when data changes
 * A `Testing Framework and philosophy <http://docs.angularjs.org/guide/dev_guide.e2e-testing>`_
-* A `deferred system <http://docs.angularjs.org/api/ng.$q>`_ similar to the one from Twisted.
+* A `deferred system <http://docs.angularjs.org/api/ng.$q>`_ similar to the one from Twisted
 * A `fast growing community and ecosystem <http://builtwith.angularjs.org/>`_
 
 On top of Angular we use nodeJS tools to ease development
 
 * gulp buildsystem, seemlessly build the app, can watch files for modification, rebuild and reload browser in dev mode.
-  In production mode, the buildsystem minifies html, css and js, so that the final app is only 3 files to download (+img).
+  In production mode, the buildsystem minifies html, css and js, so that the final app is only 3 files to download (+img)
 * alternatively webpack build system can be used for the same purposes as gulp (in UI extensions)
-* `coffeescript <http://coffeescript.org/>`_, a very expressive langage, preventing some of the major traps of JS.
-* `pug template langage  (aka jade) <https://pugjs.org/>`_, adds syntax sugar and readbility to angular html templates.
-* `Bootstrap <http://getbootstrap.com/>`_ is a css library providing know good basis for our styles.
+* `coffeescript <http://coffeescript.org/>`_, a very expressive langage, preventing some of the major traps of JS
+* `pug template langage  (aka jade) <https://pugjs.org/>`_, adds syntax sugar and readbility to angular html templates
+* `Bootstrap <http://getbootstrap.com/>`_ is a css library providing know good basis for our styles
 * `Font Awesome <http://fortawesome.github.com/Font-Awesome/>`_ is a coherent and large icon library
 
 modules we may or may not want to include:
@@ -41,7 +41,7 @@ modules we may or may not want to include:
 * `ngGrid <https://angular-ui.github.io/ui-grid/>`_ is a grid system for full featured searcheable/sortable/csv exportable grids
 * `angular-UI <http://angular-ui.github.com/>`_ is a collection of jquery based directives and filters. Probably not very useful for us
 * `JQuery <http://jquery.com/>`_ the well known JS framework, allows all sort of dom manipulation.
-  Having it inside allows for all kind of hacks we may want to avoid.
+  Having it inside allows for all kind of hacks we may want to avoid
 
 Extensibility
 ~~~~~~~~~~~~~
@@ -206,7 +206,7 @@ Next, install the Buildbot-WWW and Buildbot packages using ``--editable``, which
     make frontend
 
 This will fetch a number of dependencies from pypi, the Python package repository.
-This will also fetch a bunch a bunch of node.js dependencies used for building the web application, and a bunch of client side js dependencies, with bower
+This will also fetch a bunch of node.js dependencies used for building the web application, and a bunch of client side js dependencies, with bower.
 
 Now you'll need to create a master instance.
 For a bit more detail, see the Buildbot tutorial (:ref:`first-run-label`).
@@ -218,7 +218,7 @@ For a bit more detail, see the Buildbot tutorial (:ref:`first-run-label`).
     buildbot start sandbox/testmaster
 
 If all goes well, the master will start up and begin running in the background.
-As you just installed www in editable mode (aka 'develop' mode), setup.py did build the web site in prod mode, so the everything is minified, making it hard to debug.
+As you just installed www in editable mode (aka 'develop' mode), ``setup.py`` did build the web site in prod mode, so the everything is minified, making it hard to debug.
 
 When doing web development, you usually run:
 
