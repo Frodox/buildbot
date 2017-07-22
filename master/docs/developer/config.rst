@@ -13,6 +13,9 @@ Components which need to be notified of changes in the configuration should be
 implemented as services, subclassing :py:class:`ReconfigurableServiceMixin`, as
 described in :ref:`developer-Reconfiguration`.
 
+Master Configuration
+---------------------
+
 .. py:class:: MasterConfig
 
     The master object makes much of the configuration available from an object
