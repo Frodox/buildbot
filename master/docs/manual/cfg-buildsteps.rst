@@ -162,10 +162,10 @@ Arguments common to all :class:`BuildStep` subclasses:
 
 ``updateBuildSummaryPolicy``
     The policy to use to propagate the step summary to the build summary.
-    If False, the build summary will never include step summary
-    If True, the build summary will always include step summary
+    If ``False``, the build summary will never include step summary.
+    If ``True``, the build summary will always include step summary.
     If set to a list (e.g. ``[FAILURE, EXCEPTION]``), it will propagate if the step results id is present in that list.
-    If not set or None, the default is computed according to other BuildStep parameters using following algorithm::
+    If not set or ``None``, the default is computed according to other BuildStep parameters using following algorithm::
 
         self.updateBuildSummaryPolicy = [EXCEPTION, RETRY, CANCELLED]
         if self.flunkOnFailure or self.haltOnFailure or self.warnOnFailure:
