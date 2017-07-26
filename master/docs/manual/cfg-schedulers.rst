@@ -410,7 +410,7 @@ The arguments to this scheduler are:
     When ``False``, the default value, codebases without changes will use the revision from the ``codebases`` argument.
 
 ``onlyIfChanged``
-    If this is true, then builds will not be scheduled at the designated time
+    If this is ``True``, then builds will not be scheduled at the designated time
     *unless* the specified branch has seen an important change since
     the previous build.
 
@@ -470,7 +470,7 @@ The full list of parameters is:
     When ``False``, the default value, codebases without changes will use the revision from the ``codebases`` argument.
 
 ``onlyIfChanged``
-    If this is true, then builds will not be scheduled at the designated time *unless* the change filter has accepted an important change since the previous build.
+    If this is ``True``, then builds will not be scheduled at the designated time *unless* the change filter has accepted an important change since the previous build.
 
 ``branch``
     (deprecated; use ``change_filter`` and ``codebases``)
@@ -927,13 +927,13 @@ All parameter types have a few common arguments:
     The label of the tab if this parameter is included into a tab layout NestedParameter.
     This is what is displayed to the user.
 
-``default`` (optional; default: "")
+``default`` (optional; default: ``""``)
 
     The default value for the parameter, that is used if there is no user input.
 
-``required`` (optional; default: False)
+``required`` (optional; default: ``False``)
 
-    If this is true, then an error will be shown to user if there is no input in this field
+    If this is ``True``, then an error will be shown to user if there is no input in this field
 
 The parameter types are:
 
@@ -1061,8 +1061,8 @@ If authentication is active, it will use the authenticated user instead of displ
 ``size`` (optional; default: 10)
     The width of the input field (in characters).
 
-``need_email`` (optional; default True)
-    If true, require a full email address rather than arbitrary text.
+``need_email`` (optional; default ``True``)
+    If ``True``, require a full email address rather than arbitrary text.
 
 .. bb:sched:: ChoiceStringParameter
 
@@ -1075,8 +1075,8 @@ ChoiceStringParameter
         choices=["main","devel"], default="main")
 
 This parameter type lets the user choose between several choices (e.g the list of branches you are supporting, or the test campaign to run).
-If ``multiple`` is false, then its result is a string - one of the choices.
-If ``multiple`` is true, then the result is a list of strings from the choices.
+If ``multiple`` is ``False``, then its result is a string - one of the choices.
+If ``multiple`` is ``True``, then the result is a list of strings from the choices.
 
 Note that for some use cases, the choices need to be generated dynamically.
 This can be done via subclassing and overriding the 'getChoices' member function.
@@ -1088,14 +1088,14 @@ Its arguments, in addition to the common options, are:
 
     The list of available choices.
 
-``strict`` (optional; default: True)
+``strict`` (optional; default: ``True``)
 
-    If true, verify that the user's input is from the list.
-    Note that this only affects the validation of the form request; even if this argument is False, there is no HTML form component available to enter an arbitrary value.
+    If ``True``, verify that the user's input is from the list.
+    Note that this only affects the validation of the form request; even if this argument is ``False``, there is no HTML form component available to enter an arbitrary value.
 
 ``multiple``
 
-    If true, then the user may select multiple choices.
+    If ``True``, then the user may select multiple choices.
 
 Example::
 
