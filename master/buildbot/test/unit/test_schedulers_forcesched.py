@@ -206,6 +206,20 @@ class TestForceScheduler(scheduler.SchedulerMixin, ConfigErrorsMixin, unittest.T
           })
 
     @defer.inlineCallbacks
+    def test_basicForce_requiredCodebaseArguments(self):
+        sched = self.makeScheduler(
+            codebases=oneCodebase(name="Repository codebase",
+                                  repository=StringParameter(
+                                    name="repository",
+                                    label="repository url:",
+                                    required=True)
+        ))
+
+        yield sched.force('user', branch='b', revision='c',
+                          repository='d', project='p',
+                          )
+
+    @defer.inlineCallbacks
     def test_force_allBuilders(self):
         sched = self.makeScheduler()
 
